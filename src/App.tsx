@@ -55,7 +55,7 @@ const specs: Record<
   }
 > = {
   switch: {
-    title: 'Logic switch',
+    title: 'Switch',
     short: 'INPUT',
     group: 'Inputs',
     inputs: 0,
@@ -63,7 +63,7 @@ const specs: Record<
     color: '#39d98a',
   },
   clock: {
-    title: 'Pulse source',
+    title: 'Clock',
     short: 'CLK',
     group: 'Inputs',
     inputs: 0,
@@ -71,7 +71,7 @@ const specs: Record<
     color: '#39d98a',
   },
   and: {
-    title: 'AND gate',
+    title: 'AND',
     short: 'AND',
     group: 'Logic gates',
     inputs: 2,
@@ -79,7 +79,7 @@ const specs: Record<
     color: '#67b7ff',
   },
   or: {
-    title: 'OR gate',
+    title: 'OR',
     short: 'OR',
     group: 'Logic gates',
     inputs: 2,
@@ -87,7 +87,7 @@ const specs: Record<
     color: '#67b7ff',
   },
   not: {
-    title: 'NOT gate',
+    title: 'NOT',
     short: 'NOT',
     group: 'Logic gates',
     inputs: 1,
@@ -95,7 +95,7 @@ const specs: Record<
     color: '#67b7ff',
   },
   nand: {
-    title: 'NAND gate',
+    title: 'NAND',
     short: 'NAND',
     group: 'Logic gates',
     inputs: 2,
@@ -103,7 +103,7 @@ const specs: Record<
     color: '#67b7ff',
   },
   nor: {
-    title: 'NOR gate',
+    title: 'NOR',
     short: 'NOR',
     group: 'Logic gates',
     inputs: 2,
@@ -111,7 +111,7 @@ const specs: Record<
     color: '#67b7ff',
   },
   xor: {
-    title: 'XOR gate',
+    title: 'XOR',
     short: 'XOR',
     group: 'Logic gates',
     inputs: 2,
@@ -119,7 +119,7 @@ const specs: Record<
     color: '#67b7ff',
   },
   led: {
-    title: 'LED indicator',
+    title: 'LED',
     short: 'LED',
     group: 'Outputs',
     inputs: 1,
@@ -127,7 +127,7 @@ const specs: Record<
     color: '#ffbe55',
   },
   display: {
-    title: '7-segment display',
+    title: '7-segment',
     short: '7 SEG',
     group: 'Outputs',
     inputs: 4,
@@ -135,7 +135,7 @@ const specs: Record<
     color: '#ffbe55',
   },
   ic7408: {
-    title: '74HC08 · Quad AND',
+    title: '74HC08',
     short: '74HC08',
     group: 'IC chips',
     inputs: 4,
@@ -143,7 +143,7 @@ const specs: Record<
     color: '#c4a1ff',
   },
   ic7404: {
-    title: '74HC04 · Hex NOT',
+    title: '74HC04',
     short: '74HC04',
     group: 'IC chips',
     inputs: 3,
@@ -170,7 +170,7 @@ function App() {
   const [wireMode, setWireMode] = useState(false);
   const [wireStart, setWireStart] = useState<string | null>(null);
   const [message, setMessage] = useState(
-    'Ready to build · Try toggling A and B'
+    'Ready'
   );
   const [running, setRunning] = useState(true);
   const [zoom, setZoom] = useState(1);
@@ -544,11 +544,11 @@ function App() {
           <strong>
             logic<span>lab</span>
           </strong>
-          <small>DIGITAL CIRCUIT PLAYGROUND</small>
+          
         </div>
         <div className="top-divider" />
         <span className="project-name">
-          Untitled circuit <span className="unsaved-dot" />
+          Circuit
         </span>
         <div className="top-actions">
           <span className={`run-state ${running ? 'running' : ''}`}>
@@ -568,8 +568,8 @@ function App() {
       <main className="workspace">
         <aside className="sidebar">
           <div className="sidebar-title">
-            <span>COMPONENTS</span>
-            <span className="count">{parts.length} placed</span>
+            <span>Parts</span>
+            
           </div>
           <div className="search-hint">
             <MousePointer2 size={14} /> Tap to add to canvas
@@ -635,8 +635,8 @@ function App() {
             <div className="canvas-heading">
               <span className="live-dot" />
               <div>
-                <strong>Circuit board</strong>
-                <small>MAIN WORKSPACE / {parts.length} COMPONENTS</small>
+                <strong>Circuit</strong>
+                
               </div>
             </div>
             <div className="canvas-tools">
@@ -653,7 +653,7 @@ function App() {
                 }}
               >
                 <Cable size={16} />
-                {wireMode ? 'Wiring…' : 'Wire mode'}
+                {wireMode ? 'Wiring…' : 'Wire'}
               </button>
               <span className="tool-separator" />
               <button
@@ -756,25 +756,18 @@ function App() {
                   <div>
                     <Cpu size={30} />
                   </div>
-                  <h2>Your board is a blank slate.</h2>
-                  <p>
-                    Add a component from the left to start creating a circuit.
-                  </p>
+                  <h2>Empty canvas</h2>
+                  <p>Add a part to begin.</p>
                   <button onClick={loadExample} className="btn primary">
-                    Load a sample circuit
+                    Load example
                   </button>
                 </div>
               )}
             </div>
           </div>
           <div className="canvas-footer">
-            <span>
-              <MousePointer2 size={13} /> Drag components to arrange
-            </span>
-            <span>
-              <span className="legend-dot high-dot" /> HIGH{' '}
-              <span className="legend-dot low-dot" /> LOW
-            </span>
+            
+            
             <div className="zoom-controls">
               <button onClick={() => setZoom(z => Math.max(0.65, z - 0.1))}>
                 −
@@ -877,7 +870,7 @@ function App() {
             </div>
           )}
           <div className="inspector-section truth-table">
-            <label>LOGIC CHEAT SHEET</label>
+            <label>Truth table</label>
             <div className="truth-head">
               <span>A</span>
               <span>B</span>
