@@ -1223,3 +1223,56 @@ body,
   .sidebar { border-top-color: #e5e9f2; }
   .topbar { box-shadow: 0 1px 2px #17203308; }
 }
+
+/* Minimal layout: keep the canvas primary and labels short. */
+.app-shell { min-height: 100vh; height: 100vh; }
+.topbar { height: 58px; padding: 0 18px; gap: 10px; }
+.brand-mark { width: 30px; height: 30px; }
+.brand strong { font-size: 20px; }
+.brand small, .top-divider, .project-name, .run-state { display: none; }
+.top-actions { gap: 6px; }
+.workspace { grid-template-columns: 190px minmax(0, 1fr); }
+.sidebar { padding: 16px 10px; border-right: 1px solid #e7eaf1; }
+.sidebar-title { padding: 0 4px 8px; }
+.count, .search-hint, .sidebar-bottom { display: none; }
+.component-group { margin: 12px 0; }
+.component-group h3 { margin: 0 4px 7px; font-size: 10px; letter-spacing: .2px; text-transform: none; color: #7b8496; }
+.component-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.component-tile { min-height: 44px; padding: 6px 7px; gap: 5px; flex-direction: column; justify-content: center; text-align: center; }
+.tile-glyph { font-size: 16px; width: auto; line-height: 1; }
+.tile-name { font-size: 10px; line-height: 1.15; }
+.tile-plus { display: none; }
+.canvas-toolbar { height: 52px; padding: 0 14px; }
+.canvas-heading { gap: 8px; }
+.canvas-heading small { display: none; }
+.canvas-heading strong { font-size: 13px; }
+.canvas-tools { gap: 6px; }
+.tool-btn { min-height: 32px; }
+.board-wrap { padding: 10px; }
+.board { border-radius: 8px; }
+.board-grid { background-size: 20px 20px; }
+.inspector, .statusbar { display: none; }
+.canvas-footer { height: 34px; padding: 0 14px; }
+.canvas-footer > span { display: none; }
+.zoom-controls { gap: 8px; }
+.zoom-controls button { width: 26px; height: 24px; }
+.btn { padding: 8px 11px; }
+.empty-board { width: 230px; }
+.empty-board > div { width: 42px; height: 42px; border-radius: 10px; }
+.empty-board h2 { font-size: 15px; margin: 10px 0 4px; }
+.empty-board p { font-size: 12px; }
+@media (max-width: 650px) {
+  .app-shell { height: auto; min-height: 100vh; }
+  .topbar { padding: 0 10px; }
+  .workspace { display: flex; flex-direction: column; }
+  .sidebar { order: 2; border-top: 1px solid #e7eaf1; border-right: 0; padding: 12px; }
+  .component-group { margin: 8px 0; }
+  .component-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .component-tile { min-height: 48px; }
+  .canvas-area { order: 1; min-height: 56vh; }
+  .canvas-toolbar { padding: 0 10px; }
+  .tool-btn { padding: 0 9px; font-size: 10px; }
+  .board-wrap { padding: 7px; }
+  .board { min-height: 430px; }
+  .canvas-footer { padding: 0 10px; }
+}
