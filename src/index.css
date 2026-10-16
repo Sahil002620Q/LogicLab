@@ -1017,3 +1017,209 @@ button:disabled {
     white-space: nowrap;
   }
 }
+
+/* Clean, light LogicLab workspace */
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #172033;
+  background: #f5f7fb;
+}
+body,
+.app-shell {
+  background: #f5f7fb;
+  color: #172033;
+}
+.topbar,
+.sidebar,
+.inspector,
+.statusbar {
+  background: #ffffff;
+  border-color: #e5e9f2;
+}
+.topbar {
+  box-shadow: 0 1px 2px #17203308;
+}
+.brand-mark {
+  color: #ffffff;
+  background: #4f6bed;
+  box-shadow: none;
+  border-radius: 10px;
+}
+.brand strong { color: #172033; }
+.brand strong span { color: #4f6bed; }
+.brand small,
+.canvas-heading small { color: #8993a7; }
+.top-divider,
+.tool-separator { background: #e5e9f2; }
+.project-name { color: #6f7890; }
+.unsaved-dot { background: #e4a23a; }
+.run-state { color: #8993a7; }
+.run-state.running { color: #16865c; }
+.run-state.running span,
+.status-pulse,
+.live-dot { background: #18a66a; box-shadow: none; }
+.btn {
+  border-color: #dfe4ee;
+  background: #ffffff;
+  color: #39445b;
+  border-radius: 8px;
+  padding: 9px 13px;
+}
+.btn.secondary { background: #ffffff; }
+.btn.primary {
+  background: #4f6bed;
+  border-color: #4f6bed;
+  color: #ffffff;
+}
+.workspace { background: #f5f7fb; }
+.sidebar { border-right-color: #e5e9f2; }
+.sidebar-title,
+.inspector-header { color: #66718a; }
+.count { color: #8c96aa; }
+.search-hint {
+  background: #f7f8fc;
+  border-color: #e8ebf3;
+  color: #7e889d;
+  border-radius: 8px;
+}
+.component-group h3,
+.inspector-section > label { color: #8a94a8; }
+.component-tile {
+  background: #ffffff;
+  border-color: #edf0f6;
+  color: #39445b;
+  border-radius: 9px;
+}
+.component-tile:hover {
+  background: #f7f8ff;
+  border-color: #cbd4ff;
+  transform: translateY(-1px);
+}
+.tile-plus { color: #8c96aa; }
+.sidebar-bottom {
+  border-color: #e7eaf3;
+  background: #f8f9fd;
+}
+.sidebar-bottom strong { color: #39445b; }
+.sidebar-bottom p { color: #7c879d; }
+.canvas-area { background: #f7f8fc; }
+.canvas-toolbar { border-color: #e5e9f2; }
+.canvas-heading strong { color: #172033; }
+.tool-btn,
+.icon-btn {
+  background: #ffffff;
+  border-color: #dfe4ee;
+  color: #69758d;
+  border-radius: 8px;
+}
+.tool-btn.active {
+  background: #eef1ff;
+  color: #405be0;
+  border-color: #ccd4ff;
+}
+.icon-btn:hover,
+.tool-btn:hover {
+  border-color: #bfc9ef;
+  color: #3348ba;
+}
+.board {
+  background: #ffffff;
+  border-color: #e0e5ef;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #17203306;
+}
+.board-grid {
+  background-image: radial-gradient(#d6dce9 1px, transparent 1px);
+  opacity: 0.75;
+}
+.part {
+  background: #ffffff;
+  border-color: #d9e0ec;
+  box-shadow: 0 5px 16px #1b29400c;
+  border-radius: 10px;
+}
+.part.selected {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--part-color) 18%, transparent), 0 6px 18px #1b294014;
+}
+.part-head {
+  background: #f7f8fc;
+  border-bottom-color: #e8ebf2;
+  color: #46516a;
+  border-radius: 9px 9px 0 0;
+}
+.mini-remove { color: #98a1b4; }
+.pin { border-color: #98a5ba; background: #ffffff; }
+.pin.high { background: #18a66a; border-color: #18a66a; box-shadow: 0 0 0 3px #18a66a1c; }
+.toggle {
+  background: #f8f9fc;
+  border-color: #dfe4ee;
+  color: #79849a;
+}
+.toggle.on {
+  background: #e9f8f0;
+  border-color: #b7e7ce;
+  color: #16865c;
+}
+.toggle.on span { background: #18a66a; box-shadow: none; }
+.led-light { color: #7c879b; }
+.led-light span { background: #eef1f6; border-color: #a8b2c2; }
+.led-light.lit { color: #16865c; }
+.led-light.lit span {
+  background: #18a66a;
+  border-color: #8be0b4;
+  box-shadow: 0 0 12px #18a66a35;
+}
+.gate-core small { color: #8b95a9; }
+.chip-core { background: #f8f6ff; }
+.notch { background: #ffffff; }
+.seg { background: #e3e7ef; }
+.seg.lit { background: #ef5364; box-shadow: 0 0 8px #ef53642b; }
+.empty-board { color: #7c879b; }
+.empty-board > div {
+  background: #eef1ff;
+  border-color: #d8deff;
+  color: #4f6bed;
+}
+.empty-board h2 { color: #172033; }
+.canvas-footer { border-color: #e5e9f2; color: #8993a7; }
+.zoom-controls button {
+  border-color: #dfe4ee;
+  background: #ffffff;
+  color: #69758d;
+}
+.inspector { border-left-color: #e5e9f2; }
+.selected-card {
+  background: #f8f9fd;
+  border-color: #e5e9f2;
+  border-radius: 10px;
+}
+.selected-icon { background: #eef1ff; }
+.selected-card strong { color: #27324a; }
+.selected-card small { color: #7d879c; }
+.info-row { color: #748099; }
+.info-row strong { color: #27324a; }
+.signal-row {
+  background: #f8f9fc;
+  border-color: #e7eaf2;
+}
+.signal-row span { color: #69758d; }
+.signal-high { color: #16865c; }
+.signal-low { color: #7c879b; }
+.delete-wide {
+  background: #fff5f5;
+  border-color: #f2d6da;
+  color: #c24152;
+}
+.selection-target { border-color: #d6dce8; color: #8993a7; }
+.inspector-empty strong { color: #39445b; }
+.inspector-empty p { color: #7d879c; }
+.truth-table { border-top-color: #e5e9f2; }
+.truth-head { background: #f1f3f9; color: #65718a; }
+.truth-row { color: #7d879c; border-bottom-color: #edf0f6; }
+.truth-row .on-val { color: #16865c; }
+.statusbar { color: #7d879c; }
+.status-divider { color: #c5ccda; }
+@media (max-width: 650px) {
+  .sidebar { border-top-color: #e5e9f2; }
+  .topbar { box-shadow: 0 1px 2px #17203308; }
+}
