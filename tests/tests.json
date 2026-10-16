@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Build and simulate an AND circuit",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "component palette",
+      "node-to-node wiring",
+      "live logic simulation",
+      "output display"
+    ],
+    "description": "Verifies a user can place logic components, wire them, and observe a simulated output.",
+    "steps": [
+      "Open the circuit workbench",
+      "Place an AND gate and two input switches",
+      "Connect both switches to the gate and connect the gate to the LED output",
+      "Toggle the switches"
+    ],
+    "expected": "The output LED is OFF unless both input switches are ON, and becomes ON when both are ON."
+  },
+  {
+    "name": "Place and move components on mobile",
+    "viewport": "mobile",
+    "covers": [
+      "mobile responsive layout",
+      "component placement",
+      "component selection"
+    ],
+    "description": "Checks that core circuit-building interactions remain usable on a narrow screen.",
+    "steps": [
+      "Open the component palette",
+      "Add a NOT gate to the canvas",
+      "Select the gate and drag it to a different position"
+    ],
+    "expected": "The gate remains visible at the new position and the canvas controls stay accessible."
+  },
+  {
+    "name": "Disconnect and remove a circuit component",
+    "viewport": "desktop",
+    "covers": [
+      "wire deletion",
+      "component deletion",
+      "invalid connection guardrail"
+    ],
+    "description": "Verifies wiring can be removed and deleting a component cleans up its connected wires.",
+    "steps": [
+      "Add two input switches and an OR gate",
+      "Connect the inputs to the OR gate",
+      "Delete one wire, then delete the OR gate"
+    ],
+    "expected": "The selected wire disappears, and deleting the gate removes its remaining attached wires without breaking the workbench."
+  },
+  {
+    "name": "Use a chip and a numeric display",
+    "viewport": "desktop",
+    "covers": ["IC components", "seven-segment display", "simulation state"],
+    "description": "Verifies a digital IC and display component can be placed and show the logic state connected to them.",
+    "steps": [
+      "Add a 74HC08 AND chip and a seven-segment display",
+      "Connect input switches to the chip inputs",
+      "Connect one chip output to a display input"
+    ],
+    "expected": "The IC and display appear on the canvas with labelled pins, and the display updates according to the evaluated input."
+  }
+]
