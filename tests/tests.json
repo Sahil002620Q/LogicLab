@@ -5,61 +5,67 @@
     "viewport": "desktop",
     "covers": [
       "component palette",
+      "circular input/output ports",
+      "dragging nodes",
       "node-to-node wiring",
       "live logic simulation",
       "output display"
     ],
-    "description": "Verifies a user can place logic components, wire them, and observe a simulated output.",
+    "description": "Verifies users can place, move, connect, and simulate circuit nodes.",
     "steps": [
-      "Open the circuit workbench",
+      "Open the circuit editor",
       "Place an AND gate and two input switches",
-      "Connect both switches to the gate and connect the gate to the LED output",
-      "Toggle the switches"
+      "Drag a node to a new location",
+      "Connect both switches to the gate and the gate to the LED",
+      "Toggle both switches"
     ],
-    "expected": "The output LED is OFF unless both input switches are ON, and becomes ON when both are ON."
+    "expected": "Nodes move smoothly, wires stay attached to circular ports, and the LED turns ON only when both inputs are ON."
   },
   {
-    "name": "Place and move components on mobile",
+    "name": "Use the editor on mobile",
     "viewport": "mobile",
     "covers": [
-      "mobile responsive layout",
+      "responsive layout",
       "component placement",
-      "component selection"
+      "pointer-based node dragging"
     ],
-    "description": "Checks that core circuit-building interactions remain usable on a narrow screen.",
+    "description": "Checks circuit editing remains usable on a narrow touchscreen.",
     "steps": [
-      "Open the component palette",
-      "Add a NOT gate to the canvas",
-      "Select the gate and drag it to a different position"
+      "Open the palette",
+      "Add a NOT gate",
+      "Drag it to a different position"
     ],
-    "expected": "The gate remains visible at the new position and the canvas controls stay accessible."
+    "expected": "The gate remains visible at its new position and the palette remains accessible."
   },
   {
-    "name": "Disconnect and remove a circuit component",
+    "name": "Remove wires and components",
     "viewport": "desktop",
     "covers": [
       "wire deletion",
       "component deletion",
-      "invalid connection guardrail"
+      "connection cleanup"
     ],
-    "description": "Verifies wiring can be removed and deleting a component cleans up its connected wires.",
+    "description": "Verifies wires and nodes can be removed without leaving broken connections.",
     "steps": [
-      "Add two input switches and an OR gate",
-      "Connect the inputs to the OR gate",
-      "Delete one wire, then delete the OR gate"
+      "Select a wire by clicking its line",
+      "Remove a connected node"
     ],
-    "expected": "The selected wire disappears, and deleting the gate removes its remaining attached wires without breaking the workbench."
+    "expected": "The selected wire disappears and removing a node also removes all attached wires."
   },
   {
-    "name": "Use a chip and a numeric display",
+    "name": "Place IC and display nodes",
     "viewport": "desktop",
-    "covers": ["IC components", "seven-segment display", "simulation state"],
-    "description": "Verifies a digital IC and display component can be placed and show the logic state connected to them.",
-    "steps": [
-      "Add a 74HC08 AND chip and a seven-segment display",
-      "Connect input switches to the chip inputs",
-      "Connect one chip output to a display input"
+    "covers": [
+      "IC components",
+      "seven-segment display",
+      "multiple circular ports"
     ],
-    "expected": "The IC and display appear on the canvas with labelled pins, and the display updates according to the evaluated input."
+    "description": "Checks IC and display nodes expose the correct number of connection ports.",
+    "steps": [
+      "Add a 74HC08 chip and a seven-segment display",
+      "Connect switches to the chip",
+      "Connect an output to the display"
+    ],
+    "expected": "The chip and display appear with circular ports and their logic state updates."
   }
 ]
